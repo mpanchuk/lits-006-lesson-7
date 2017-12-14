@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+  <% @post.errors.full_messages.each do |e| %>
+    <%= e %>
+  <% end %>
+  <br><br>
+  Title<br/>
+  <%= f.text_field :title %><br/><br/>
+  Content<br/>
+  <%= f.text_field :content %><br/><br/>
+  <%= f.submit %>
+<% end %>
